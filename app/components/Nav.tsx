@@ -32,7 +32,7 @@ export default function Nav() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
           {[
-            { label: 'Benefits', href: '/benefits' },
+            { label: 'Perks', href: '/benefits' },
             { label: 'Platform', href: '/platform' },
             { label: 'For HR Teams', href: '/for-hr' },
             { label: 'Pricing', href: '/pricing' },
@@ -70,7 +70,7 @@ export default function Nav() {
       {mobileOpen && (
         <div className="md:hidden glass-nav mt-2 mx-4 rounded-2xl p-4 border border-white/50">
           {[
-            { label: 'Benefits', href: '/benefits' },
+            { label: 'Perks', href: '/benefits' },
             { label: 'Platform', href: '/platform' },
             { label: 'For HR Teams', href: '/for-hr' },
             { label: 'Pricing', href: '/pricing' },

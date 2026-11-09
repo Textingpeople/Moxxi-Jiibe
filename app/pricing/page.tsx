@@ -12,10 +12,10 @@ const plans = [
     name: 'Starter',
     price: '$8',
     period: 'per employee/mo',
-    desc: 'Perfect for small teams getting started with lifestyle benefits.',
+    desc: 'Perfect for small teams getting started with lifestyle perks.',
     stipend: 'Up to $100/employee/mo budget',
     features: [
-      'Full benefits catalog',
+      'Full perks catalog',
       'Up to 50 employees',
       'Monthly budget management',
       'Basic analytics dashboard',
@@ -55,7 +55,7 @@ const plans = [
     features: [
       'Everything in Growth',
       'Unlimited employees',
-      'Custom benefit curation',
+      'Custom perk curation',
       'Dedicated customer success manager',
       'SLA guarantees',
       'Custom integrations',
@@ -81,11 +81,11 @@ export default function PricingPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
             Pay for the platform.<br />
             <span style={{ background: 'linear-gradient(135deg, #1a4731, #2d6a4f, #40916c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              Only pay for benefits used.
+              Only pay for perks used.
             </span>
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
-            Jiibe charges a small platform fee per employee. The monthly benefits budget you set is separate — and unused budget rolls back to you every month.
+            Jiibe charges a small platform fee per employee. The monthly perks budget you set is separate — and unused budget rolls back to you every month.
           </p>
           <p className="text-sm text-gray-400">No setup fees. No annual contracts required. Cancel anytime.</p>
         </div>
@@ -156,9 +156,9 @@ export default function PricingPage() {
                 icon: '🏪',
               },
               {
-                title: 'Monthly benefits budget',
-                desc: 'You set a monthly budget per employee (e.g., $100/mo). Employees spend it on benefits they choose. Unused budget rolls back to you.',
-                example: 'Example: 100 employees × $100 budget = up to $10,000/mo in benefits',
+                title: 'Monthly perks budget',
+                desc: 'You set a monthly budget per employee (e.g., $100/mo). Employees spend it on perks they choose. Unused budget rolls back to you.',
+                example: 'Example: 100 employees × $100 budget = up to $10,000/mo in perks',
                 icon: '💳',
               },
               {
@@ -170,7 +170,7 @@ export default function PricingPage() {
               {
                 title: 'No hidden fees',
                 desc: 'No setup fees, no annual contracts required, no per-transaction fees, no vendor fees. What you see is what you pay.',
-                example: 'Total monthly cost = Platform fee + Benefits redeemed',
+                example: 'Total monthly cost = Platform fee + Perks redeemed',
                 icon: '✅',
               },
             ].map(item => (
@@ -197,7 +197,7 @@ export default function PricingPage() {
             {[
               { q: 'Is there a free trial?', a: 'Yes. All plans include a 30-day free trial. No credit card required to start.' },
               { q: 'Can I change plans?', a: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of the next billing cycle.' },
-              { q: 'What happens to unused budget?', a: 'Unused monthly budget rolls back to your company account at the end of each month. You only pay for benefits employees actually redeem.' },
+              { q: 'What happens to unused budget?', a: 'Unused monthly budget rolls back to your company account at the end of each month. You only pay for perks employees actually redeem.' },
               { q: 'Are there annual discounts?', a: 'Yes. Annual billing saves 20% compared to monthly billing. Contact us for annual pricing.' },
               { q: 'Can I set different budget amounts for different employee groups?', a: 'Yes, on Growth and Enterprise plans you can set different budget amounts for different employee groups (e.g., full-time vs. part-time, different departments).' },
               { q: 'Is there a minimum number of employees?', a: 'No minimum. Jiibe works for teams of any size.' },

@@ -28,7 +28,7 @@ export default function ForHRPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-500 mb-8 leading-relaxed">
-                Stop managing complicated benefit packages that half your team ignores. Jiibe gives every employee a monthly benefits budget to spend on the benefits they actually want.
+                Stop managing complicated perk packages that half your team ignores. Jiibe gives every employee a monthly perks budget to spend on the perks they actually want.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/demo"
@@ -75,7 +75,7 @@ export default function ForHRPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why HR teams choose Jiibe</h2>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              We built Jiibe to solve the problems HR teams actually face with traditional benefits.
+              We built Jiibe to solve the problems HR teams actually face with traditional perks.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -83,22 +83,22 @@ export default function ForHRPage() {
               {
                 problem: 'The old way',
                 solution: 'The Jiibe way',
-                old: 'Spend weeks selecting benefit packages. Negotiate with vendors. Manage annual enrollment windows. Deal with employees who never use their benefits.',
+                old: 'Spend weeks selecting perk packages. Negotiate with vendors. Manage annual enrollment windows. Deal with employees who never use their perks.',
                 new: 'Set a monthly budget quickly. Employees choose from a curated catalog across 15 categories. No enrollment windows.',
                 icon: '⚡',
               },
               {
                 problem: 'The old way',
                 solution: 'The Jiibe way',
-                old: 'Pay for benefits whether employees use them or not. Complicated invoicing. Hard to track ROI. Employees complain about benefits they don\'t want.',
+                old: 'Pay for perks whether employees use them or not. Complicated invoicing. Hard to track ROI. Employees complain about perks they don\'t want.',
                 new: 'Only pay for what employees actually redeem. Unused budget rolls back. Aggregate dashboards for reporting.',
                 icon: '💰',
               },
               {
                 problem: 'The old way',
                 solution: 'The Jiibe way',
-                old: 'Manual HRIS updates when employees join or leave. Separate logins for each benefit vendor. Hours spent on benefits administration every month.',
-                new: 'Automatic HRIS sync. One platform instead of many vendor contracts. Benefits administration takes minutes, not hours.',
+                old: 'Manual HRIS updates when employees join or leave. Separate logins for each perk vendor. Hours spent on perks administration every month.',
+                new: 'Automatic HRIS sync. One platform instead of many vendor contracts. Perks administration takes minutes, not hours.',
                 icon: '🔗',
               },
             ].map((item, i) => (
@@ -131,8 +131,8 @@ export default function ForHRPage() {
                 {[
                   { step: '1', title: 'Connect your HRIS', desc: 'We connect with your HRIS. Employees are automatically enrolled.' },
                   { step: '2', title: 'Set your budget', desc: 'Choose a monthly per-employee budget. You can set different amounts for different employee groups.' },
-                  { step: '3', title: 'Invite your team', desc: 'Employees receive an email with instructions to access their benefits.' },
-                  { step: '4', title: 'Employees choose benefits', desc: 'Employees choose their own benefits and redeem them in their Jiibe account.' },
+                  { step: '3', title: 'Invite your team', desc: 'Employees receive an email with instructions to access their perks.' },
+                  { step: '4', title: 'Employees choose perks', desc: 'Employees choose their own perks and redeem them in their Jiibe account.' },
                 ].map(item => (
                   <div key={item.step} className="flex items-start gap-4">
                     <div className="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0"
@@ -180,12 +180,12 @@ export default function ForHRPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Know exactly what&apos;s working</h2>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Aggregate dashboards give you the data you need to optimize your benefits program.
+              Aggregate dashboards give you the data you need to optimize your perks program.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { title: 'Employees pick what they\'ll actually use', desc: 'A curated catalog across 15 categories means employees choose benefits that fit their life.' },
+              { title: 'Employees pick what they\'ll actually use', desc: 'A curated catalog across 15 categories means employees choose perks that fit their life.' },
               { title: 'Pay only for what\'s redeemed', desc: 'Unused monthly budget rolls back to the employer at the end of the month.' },
               { title: 'Different budgets for different groups', desc: 'Set different monthly budgets for different employee groups.' },
               { title: 'Aggregate-only reporting', desc: 'HR sees aggregate participation — never individual employee selections.' },
@@ -202,7 +202,7 @@ export default function ForHRPage() {
       {/* CTA */}
       <section className="py-20 px-6" style={{ background: '#1a2e1f' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to transform your benefits program?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to transform your perks program?</h2>
           <p className="text-gray-400 mb-8 text-lg">Book a 20-minute demo. We&apos;ll show you exactly how Jiibe works and answer all your questions.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo"

@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Jiibe — Employer-Funded Lifestyle Benefits',
-  description: 'Jiibe is a lifestyle-benefits marketplace employers offer their teams. HR sets a monthly budget; employees choose benefits across 15 categories.',
-  keywords: 'employer-funded benefits, lifestyle benefits, benefits marketplace, HR benefits, employee benefits platform',
+  title: 'Jiibe — Employer-Funded Lifestyle Perks',
+  description: 'Jiibe is a lifestyle-perks marketplace employers offer their teams. HR sets a monthly budget; employees choose perks across 15 categories.',
+  keywords: 'employer-funded perks, lifestyle perks, perks marketplace, HR perks, employee perks platform',
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },

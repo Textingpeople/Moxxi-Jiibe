@@ -52,7 +52,7 @@ export default function ContactPage() {
                   {
                     icon: '🛟',
                     title: 'Customer Support',
-                    desc: 'Need help with your account or benefits? We\'re here.',
+                    desc: 'Need help with your account or perks? We\'re here.',
                     contact: 'support@jiibe.com',
                     href: 'mailto:support@jiibe.com',
                   },

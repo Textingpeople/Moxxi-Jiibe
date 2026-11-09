@@ -62,13 +62,13 @@ export default function SignupPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
             style={{ background: 'rgba(26,71,49,0.08)', color: '#1a4731', border: '1px solid rgba(26,71,49,0.15)' }}>
             <div className="w-1.5 h-1.5 rounded-full bg-green-600" />
-            Employee Benefits Portal
+            Employee Perks Portal
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-            Access Your Benefits
+            Access Your Perks
           </h1>
           <p className="text-lg text-gray-500">
-            Your employer has set up a Jiibe benefits program. Use your Company ID to get started.
+            Your employer has set up a Jiibe perks program. Use your Company ID to get started.
           </p>
           <p className="text-sm text-gray-400 mt-3">
             Jiibe is available only to employees of enrolled companies.
@@ -125,7 +125,7 @@ export default function SignupPage() {
                   <span className="text-lg">🏢</span>
                   <div>
                     <p className="text-sm font-semibold text-green-800 mb-1">How to get your Company ID</p>
-                    <p className="text-xs text-green-700">Your Company ID was provided by your HR team, benefits manager, or in your onboarding materials. Contact your HR department if you don&apos;t have one.</p>
+                    <p className="text-xs text-green-700">Your Company ID was provided by your HR team, perks manager, or in your onboarding materials. Contact your HR department if you don&apos;t have one.</p>
                   </div>
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function SignupPage() {
                 <button type="submit"
                   className="flex-1 py-4 text-sm font-semibold text-white rounded-2xl shadow-lg transition-all hover:opacity-90"
                   style={{ background: 'linear-gradient(135deg, #1a4731, #2d6a4f)' }}>
-                  Access My Benefits
+                  Access My Perks
                 </button>
               </div>
             </form>
@@ -310,7 +310,7 @@ export default function SignupPage() {
               </p>
               <div className="p-6 rounded-2xl text-left mb-8" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.12)' }}>
                 <p className="text-sm text-green-800 leading-relaxed">
-                  📧 <strong>We&apos;ve notified your employer</strong> (Company ID: <strong>{formData.companyId}</strong>) that you&apos;ve requested access. Once approved, you&apos;ll receive an email at <strong>{formData.email}</strong> with instructions to activate your account and start choosing benefits.
+                  📧 <strong>We&apos;ve notified your employer</strong> (Company ID: <strong>{formData.companyId}</strong>) that you&apos;ve requested access. Once approved, you&apos;ll receive an email at <strong>{formData.email}</strong> with instructions to activate your account and start choosing perks.
                 </p>
                 <p className="text-sm text-green-800 leading-relaxed mt-3">
                   You&apos;ll be able to choose from a curated catalog across 15 lifestyle categories.

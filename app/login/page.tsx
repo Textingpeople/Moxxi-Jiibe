@@ -85,10 +85,10 @@ export default function LoginPage() {
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-6"
                   style={{ background: 'rgba(26,71,49,0.08)', color: '#1a4731', border: '1px solid rgba(26,71,49,0.15)' }}>
                   <div className="w-1.5 h-1.5 rounded-full bg-green-600" />
-                  Employee Benefits Portal
+                  Employee Perks Portal
                 </div>
                 <h1 className="text-3xl font-bold text-gray-900 tracking-tight mb-2">Welcome back</h1>
-                <p className="text-gray-500">Sign in to access your benefits</p>
+                <p className="text-gray-500">Sign in to access your perks</p>
               </div>
 
               <div className="glass-card p-8">
@@ -172,7 +172,7 @@ export default function LoginPage() {
                     type="submit"
                     className="w-full py-3.5 text-sm font-semibold text-white rounded-xl shadow-md hover:opacity-90 transition-all"
                     style={{ background: 'linear-gradient(135deg, #1a4731, #2d6a4f)' }}>
-                    Sign In to My Benefits
+                    Sign In to My Perks
                   </button>
                 </form>
 

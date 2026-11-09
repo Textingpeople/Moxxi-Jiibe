@@ -65,7 +65,7 @@ export default function DemoPage() {
 
               <div className="space-y-5 mb-10">
                 {[
-                  { icon: '🏪', title: 'Catalog walkthrough', desc: 'See the full category catalog and how employees redeem benefits in their account.' },
+                  { icon: '🏪', title: 'Catalog walkthrough', desc: 'See the full category catalog and how employees redeem perks in their account.' },
                   { icon: '⚙️', title: 'HR admin demo', desc: 'Watch how easy it is to set budgets, manage employees, and view aggregate participation.' },
                   { icon: '📊', title: 'Aggregate reporting', desc: 'See the dashboards HR teams use to review aggregate participation.' },
                   { icon: '🔗', title: 'HRIS integration', desc: 'We\'ll show you how your existing HRIS connects.' },
@@ -193,7 +193,7 @@ export default function DemoPage() {
                   </p>
                   <div className="p-5 rounded-2xl text-left mb-8" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.12)' }}>
                     <p className="text-sm text-green-800 leading-relaxed">
-                      📅 <strong>What to expect:</strong> A 20-minute video call where we&apos;ll walk you through the full Jiibe experience — the employee benefits catalog, HR admin dashboard, analytics, and HRIS integrations.
+                      📅 <strong>What to expect:</strong> A 20-minute video call where we&apos;ll walk you through the full Jiibe experience — the employee perks catalog, HR admin dashboard, analytics, and HRIS integrations.
                     </p>
                     <p className="text-sm text-green-800 leading-relaxed mt-3">
                       Questions in the meantime? Email us at <a href="mailto:sales@jiibe.com" className="underline font-semibold">sales@jiibe.com</a>

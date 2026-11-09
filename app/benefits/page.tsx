@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { CategoryIcon } from '../components/BrandLogo';
 
 export const metadata: Metadata = {
-  title: 'Benefits — Jiibe',
+  title: 'Perks — Jiibe',
 };
 
 const categories = [
@@ -184,16 +184,16 @@ export default function BenefitsPage() {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8"
             style={{ background: 'rgba(26,71,49,0.08)', color: '#1a4731', border: '1px solid rgba(26,71,49,0.15)' }}>
-            Benefits Catalog
+            Perks Catalog
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
-            Benefits for every lifestyle.
+            Perks for every lifestyle.
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
-            A curated catalog of lifestyle benefits across 15 categories. Employees choose what fits their life and redeem it in their Jiibe account.
+            A curated catalog of lifestyle perks across 15 categories. Employees choose what fits their life and redeem it in their Jiibe account.
           </p>
           <p className="text-sm text-gray-400 max-w-xl mx-auto mb-10">
-            Available benefits vary by employer program and region. Contact us to see the current catalog.
+            Available perks vary by employer program and region. Contact us to see the current catalog.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {categories.map(cat => (
@@ -241,9 +241,9 @@ export default function BenefitsPage() {
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: '1', title: 'Select a benefit', desc: 'Employee selects a benefit in their Jiibe account.' },
+              { step: '1', title: 'Select a perk', desc: 'Employee selects a perk in their Jiibe account.' },
               { step: '2', title: 'Confirmation', desc: 'Jiibe confirms the selection in the employee\'s account.' },
-              { step: '3', title: 'Budget deduction', desc: 'The amount is deducted from the employer-funded monthly benefits budget.' },
+              { step: '3', title: 'Budget deduction', desc: 'The amount is deducted from the employer-funded monthly perks budget.' },
               { step: '4', title: 'Unused budget returns', desc: 'Unused budget returns to the employer at the end of the month.' },
             ].map(item => (
               <div key={item.step} className="glass-card p-6">
@@ -262,7 +262,7 @@ export default function BenefitsPage() {
       {/* CTA */}
       <section className="py-20 px-6" style={{ background: '#1a2e1f' }}>
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to give your team real benefits?</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to give your team real perks?</h2>
           <p className="text-gray-400 mb-8 text-lg">Set a budget. Employees choose. HR sees aggregate participation.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo"

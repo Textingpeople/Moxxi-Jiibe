@@ -20,7 +20,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">
-              Employer-funded lifestyle benefits, chosen by employees.
+              Employer-funded lifestyle perks, chosen by employees.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -41,7 +41,7 @@ export default function Footer() {
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Platform</p>
             <ul className="space-y-3">
               {[
-                { label: 'Benefits Marketplace', href: '/benefits' },
+                { label: 'Perks Marketplace', href: '/benefits' },
                 { label: 'How It Works', href: '/platform' },
                 { label: 'For HR Teams', href: '/for-hr' },
                 { label: 'Pricing', href: '/pricing' },
@@ -54,9 +54,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Benefits */}
+          {/* Perks */}
           <div>
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Benefits</p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Perks</p>
             <ul className="space-y-3">
               {[
                 { label: 'Entertainment', href: '/benefits#entertainment' },

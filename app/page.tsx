@@ -89,19 +89,19 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-8"
                 style={{ background: '#eef6f1', color: '#1e5c35', border: '1px solid #c3e6d0' }}>
                 <div className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse" />
-                Employee lifestyle benefits
+                Employee lifestyle perks
               </div>
 
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6">
-                Benefits that fit<br />
+                Perks that fit<br />
                 <span className="gradient-text-brand">every life.</span>
               </h1>
 
               <p className="text-xl text-gray-500 leading-relaxed mb-4">
-                Your employer sets a monthly benefits budget. You choose from a curated catalog of lifestyle benefits — streaming, food delivery, childcare, pet care, fitness, learning, and more.
+                Your employer sets a monthly perks budget. You choose from a curated catalog of lifestyle perks — streaming, food delivery, childcare, pet care, fitness, learning, and more.
               </p>
               <p className="text-base text-gray-400 mb-6">
-                No one-size-fits-all package. Just benefits people actually use.
+                No one-size-fits-all package. Just perks people actually use.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
@@ -116,16 +116,16 @@ export default function HomePage() {
                 <Link href="/benefits"
                   className="inline-flex items-center justify-center gap-2 px-7 py-4 text-base font-bold text-gray-700 rounded-2xl transition-all hover:bg-gray-100"
                   style={{ background: 'white', border: '1.5px solid rgba(0,0,0,0.1)' }}>
-                  Browse all benefits
+                  Browse all perks
                 </Link>
               </div>
               <p className="text-xs text-gray-400 mt-4">
-                Available to employees of companies enrolled in a Jiibe benefits program.
+                Available to employees of companies enrolled in a Jiibe perks program.
               </p>
 
               {/* Category tags — horizontal scrollable row */}
               <div className="mt-10">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">15 benefit categories</p>
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">15 perk categories</p>
                 <div className="flex flex-wrap gap-2">
                   {[
                     { label: '🎬 Entertainment', bg: '#fef3ec', text: '#8b3a0f' },
@@ -153,7 +153,7 @@ export default function HomePage() {
                 {/* Header */}
                 <div className="flex items-center justify-between mb-5">
                   <div>
-                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Your monthly benefits <span className="text-gray-300 normal-case">· Sample</span></p>
+                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-1">Your monthly perks <span className="text-gray-300 normal-case">· Sample</span></p>
                     <p className="text-2xl font-bold text-gray-900">Choose what you love</p>
                   </div>
                   <div className="text-right">
@@ -211,7 +211,7 @@ export default function HomePage() {
 
               {/* Floating badge */}
               <div className="absolute -top-4 -right-4 glass-card p-3 float-animation" style={{ zIndex: 20 }}>
-                <p className="text-xs text-gray-400 mb-1">Benefit categories</p>
+                <p className="text-xs text-gray-400 mb-1">Perk categories</p>
                 <p className="text-xl font-bold text-gray-900">15</p>
               </div>
             </div>
@@ -225,13 +225,13 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: '#1a4731' }}>At a Glance</p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-              Employer-funded lifestyle benefits, chosen by employees.
+              Employer-funded lifestyle perks, chosen by employees.
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {[
-              { title: 'What it is', desc: 'A benefits marketplace employers offer their teams, with a curated catalog across 15 lifestyle categories.' },
-              { title: 'How it works', desc: 'HR sets a monthly budget. Employees choose benefits and redeem them in their Jiibe account. HR sees aggregate participation.' },
+              { title: 'What it is', desc: 'A perks marketplace employers offer their teams, with a curated catalog across 15 lifestyle categories.' },
+              { title: 'How it works', desc: 'HR sets a monthly budget. Employees choose perks and redeem them in their Jiibe account. HR sees aggregate participation.' },
               { title: 'Text alerts', desc: 'Optional and opt-in. Account and redemption confirmations only — never marketing texts.' },
             ].map(card => (
               <div key={card.title} className="glass-card p-6">
@@ -255,7 +255,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-3">
-              Benefits for every kind of life.
+              Perks for every kind of life.
             </h2>
             <p className="text-lg text-gray-500">
               From streaming to childcare, fitness to food — employees choose what actually matters to them.
@@ -324,13 +324,13 @@ export default function HomePage() {
           {activeTab === 'employees' ? (
             <div className="grid md:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Benefits that fit your life.</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">Perks that fit your life.</h3>
                 <div className="space-y-5">
                   {[
                     { title: 'Choose what you love', desc: 'Browse the catalog across 15 categories and pick what fits your life — streaming, food, childcare, travel, pets, and more.' },
-                    { title: 'Monthly budget, your way', desc: 'Your employer sets a monthly budget. You decide how to spend it across any benefits you want.' },
+                    { title: 'Monthly budget, your way', desc: 'Your employer sets a monthly budget. You decide how to spend it across any perks you want.' },
                     { title: 'Redeem in your account', desc: 'Selections are confirmed and redeemed directly in your Jiibe account.' },
-                    { title: 'Change anytime', desc: 'Switch your benefit selections month to month. No lock-in.' },
+                    { title: 'Change anytime', desc: 'Switch your perk selections month to month. No lock-in.' },
                   ].map((item, i) => (
                     <div key={item.title} className="flex items-start gap-4">
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white flex-shrink-0 mt-0.5"
@@ -383,10 +383,10 @@ export default function HomePage() {
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Simple to set up. Easy to manage.</h3>
                 <div className="space-y-5">
                   {[
-                    { title: 'Set your budget', desc: 'Choose a monthly per-employee budget. No complicated benefit packages to manage.' },
-                    { title: 'Track participation', desc: 'See aggregate dashboards showing which benefit categories employees choose most.' },
+                    { title: 'Set your budget', desc: 'Choose a monthly per-employee budget. No complicated perk packages to manage.' },
+                    { title: 'Track participation', desc: 'See aggregate dashboards showing which perk categories employees choose most.' },
                     { title: 'HRIS integrations', desc: 'Connects with common HRIS and SSO providers. Onboarding is automatic.' },
-                    { title: 'Only pay for what\'s used', desc: 'Unused budget rolls back. You never pay for benefits employees don\'t redeem.' },
+                    { title: 'Only pay for what\'s used', desc: 'Unused budget rolls back. You never pay for perks employees don\'t redeem.' },
                   ].map((item, i) => (
                     <div key={item.title} className="flex items-start gap-4">
                       <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white flex-shrink-0 mt-0.5"
@@ -433,7 +433,7 @@ export default function HomePage() {
               Up and running in 3 steps.
             </h2>
             <p className="text-lg text-gray-400 max-w-xl mx-auto">
-              No complicated setup. No benefit consultants. Just perks your team will actually use.
+              No complicated setup. No perk consultants. Just perks your team will actually use.
             </p>
           </div>
 
@@ -461,7 +461,7 @@ export default function HomePage() {
               {
                 num: '02',
                 title: 'Employees choose',
-                desc: 'Employees browse the catalog and pick the benefits that fit their life — streaming, pet care, food delivery, their call.',
+                desc: 'Employees browse the catalog and pick the perks that fit their life — streaming, pet care, food delivery, their call.',
                 preview: (
                   <div className="p-4 rounded-xl mt-4" style={{ background: 'rgba(255,255,255,0.08)' }}>
                     <p className="text-xs text-gray-400 mb-3">Sample selections this month</p>
@@ -485,7 +485,7 @@ export default function HomePage() {
               {
                 num: '03',
                 title: 'Track participation',
-                desc: 'See aggregate dashboards. Know which benefit categories employees choose. Adjust budgets anytime.',
+                desc: 'See aggregate dashboards. Know which perk categories employees choose. Adjust budgets anytime.',
                 preview: (
                   <div className="p-4 rounded-xl mt-4" style={{ background: 'rgba(255,255,255,0.08)' }}>
                     <p className="text-xs text-gray-400 mb-2">Participation this month</p>
@@ -530,16 +530,16 @@ export default function HomePage() {
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#1a4731' }}>Employee Choice</p>
               <h2 className="text-4xl font-bold text-gray-900 tracking-tight mb-6">
-                One person&apos;s benefit is another&apos;s must-have.
+                One person&apos;s perk is another&apos;s must-have.
               </h2>
               <p className="text-lg text-gray-500 mb-6 leading-relaxed">
                 A parent covers a babysitter. A dog owner covers dog walking. A remote worker covers streaming and lunch delivery. Why give everyone the same thing?
               </p>
               <p className="text-gray-500 mb-8">
-                Jiibe lets every employee choose the benefits that actually fit their life — not a one-size-fits-all package that half your team ignores.
+                Jiibe lets every employee choose the perks that actually fit their life — not a one-size-fits-all package that half your team ignores.
               </p>
               <Link href="/benefits" className="inline-flex items-center gap-2 font-semibold text-sm" style={{ color: '#1a4731' }}>
-                Browse all benefits →
+                Browse all perks →
               </Link>
             </div>
             <div className="glass-card p-8">
@@ -583,7 +583,7 @@ export default function HomePage() {
                     { step: '1', label: 'Connect your HRIS', done: true },
                     { step: '2', label: 'Set monthly budget', done: true },
                     { step: '3', label: 'Invite employees', done: true },
-                    { step: '4', label: 'Employees choose benefits', done: false },
+                    { step: '4', label: 'Employees choose perks', done: false },
                   ].map(s => (
                     <div key={s.step} className="flex items-center gap-4">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${s.done ? 'text-white' : 'text-gray-400 border-2 border-gray-200'}`}
@@ -605,7 +605,7 @@ export default function HomePage() {
                 Quick to set up. Easy to run every month.
               </h2>
               <p className="text-lg text-gray-500 mb-6 leading-relaxed">
-                No benefit consultants. No complicated enrollment windows. No annual reviews. Just set a budget, connect your HRIS, and let employees do the rest.
+                No perk consultants. No complicated enrollment windows. No annual reviews. Just set a budget, connect your HRIS, and let employees do the rest.
               </p>
               <Link href="/for-hr" className="inline-flex items-center gap-2 font-semibold text-sm" style={{ color: '#1a4731' }}>
                 See the HR experience →
@@ -623,12 +623,12 @@ export default function HomePage() {
           </div>
           <div className="glass-card p-8">
             {[
-              { q: 'How does the monthly benefits budget work?', a: 'Employers set a monthly per-employee budget. Employees can spend that budget on any benefits in the catalog. Unused budget rolls back to the employer at the end of the month — employers only pay for what employees actually use.' },
+              { q: 'How does the monthly perks budget work?', a: 'Employers set a monthly per-employee budget. Employees can spend that budget on any perks in the catalog. Unused budget rolls back to the employer at the end of the month — employers only pay for what employees actually use.' },
               { q: 'Which HRIS systems does Jiibe connect with?', a: 'Jiibe connects with common HRIS and SSO providers. Employee onboarding and offboarding is automatic.' },
-              { q: 'How do employees redeem their benefits?', a: 'Employees log in to their Jiibe account, browse the catalog, and select a benefit. Jiibe confirms the selection in their account.' },
-              { q: 'Can employees change their selections each month?', a: 'Yes. Employees can change their benefit selections every month. The flexibility is the whole point.' },
+              { q: 'How do employees redeem their perks?', a: 'Employees log in to their Jiibe account, browse the catalog, and select a perk. Jiibe confirms the selection in their account.' },
+              { q: 'Can employees change their selections each month?', a: 'Yes. Employees can change their perk selections every month. The flexibility is the whole point.' },
               { q: 'Is there a minimum number of employees?', a: 'Jiibe works for teams of all sizes. Pricing scales with your team size.' },
-              { q: 'What happens to unused budget?', a: 'Unused monthly budget rolls back to the employer account at the end of each month. Employers never pay for benefits employees don\'t redeem.' },
+              { q: 'What happens to unused budget?', a: 'Unused monthly budget rolls back to the employer account at the end of each month. Employers never pay for perks employees don\'t redeem.' },
               { q: 'How does SMS communication work?', a: 'Employees who opt in to SMS receive transactional account alerts only: account registration and onboarding confirmations, benefit redemption confirmations and access code notices, monthly budget reminders and reset notices, and account security and sign-in alerts. SMS opt-in is always optional and separate from account access. Reply STOP to opt out at any time.' },
             ].map(faq => (
               <FAQItem key={faq.q} q={faq.q} a={faq.a} />
@@ -653,7 +653,7 @@ export default function HomePage() {
                 Give your team the freedom to choose.
               </h2>
               <p className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: '#c3e6d0' }}>
-                Set a monthly benefits budget and let employees choose from a curated catalog across 15 lifestyle categories.
+                Set a monthly perks budget and let employees choose from a curated catalog across 15 lifestyle categories.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/demo"

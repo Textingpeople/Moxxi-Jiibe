@@ -21,7 +21,7 @@ export default function PlatformPage() {
             How It Works
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight mb-6">
-            The simplest benefits platform<br />
+            The simplest perks platform<br />
             <span style={{ background: 'linear-gradient(135deg, #1a4731, #2d6a4f, #40916c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               your team will actually use.
             </span>
@@ -46,7 +46,7 @@ export default function PlatformPage() {
                 {[
                   'Browse by category — streaming, food, travel, wellness, and more',
                   'See your monthly balance and remaining budget at a glance',
-                  'Select a benefit and Jiibe confirms it in your account',
+                  'Select a perk and Jiibe confirms it in your account',
                   'Change selections every month with no lock-in',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
@@ -67,7 +67,7 @@ export default function PlatformPage() {
               {/* App header */}
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-100">
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wider">Your Benefits</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wider">Your Perks</p>
                   <p className="text-2xl font-bold text-gray-900 mt-0.5">$150 <span className="text-sm text-gray-400 font-normal">/ month</span></p>
                 </div>
                 <div className="text-right">
@@ -76,8 +76,8 @@ export default function PlatformPage() {
                 </div>
               </div>
 
-              {/* Active benefits */}
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Active Benefits <span className="text-gray-300 normal-case">· Sample</span></p>
+              {/* Active perks */}
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Active Perks <span className="text-gray-300 normal-case">· Sample</span></p>
               <div className="space-y-2 mb-5">
                 {[
                   { key: 'entertainment', name: 'Streaming subscription', cost: '$22.99', status: 'Active' },
@@ -100,7 +100,7 @@ export default function PlatformPage() {
               </div>
 
               {/* Browse section */}
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Browse More Benefits</p>
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Browse More Perks</p>
               <div className="grid grid-cols-3 gap-2">
                 {[
                   { key: 'wellness', name: 'Wellness' },
@@ -136,7 +136,7 @@ export default function PlatformPage() {
               {
                 num: '02',
                 title: 'Employees choose',
-                desc: 'Employees log in and browse the lifestyle benefits catalog. They pick what fits their life. Selections can change every month.',
+                desc: 'Employees log in and browse the lifestyle perks catalog. They pick what fits their life. Selections can change every month.',
                 detail: 'Redeemed in the employee\'s account',
               },
               {
@@ -198,7 +198,7 @@ export default function PlatformPage() {
                 ))}
               </div>
 
-              {/* Top benefits */}
+              {/* Top perks */}
               <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Top Categories This Month</p>
               <div className="space-y-2">
                 {[
@@ -230,7 +230,7 @@ export default function PlatformPage() {
               </p>
               <div className="space-y-3">
                 {[
-                  'Aggregate participation by department and benefit category',
+                  'Aggregate participation by department and perk category',
                   'Budget utilization and rollback tracking',
                   'Aggregate-only reporting — no individual employee selections shown',
                   'Export reports for leadership presentations',
@@ -283,12 +283,12 @@ export default function PlatformPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Curated Benefits Catalog', desc: '15 lifestyle categories covering entertainment, food, travel, family, pets, wellness, learning, and more.' },
+              { title: 'Curated Perks Catalog', desc: '15 lifestyle categories covering entertainment, food, travel, family, pets, wellness, learning, and more.' },
               { title: 'Flexible Budgets', desc: 'Set any monthly budget per employee. Unused budget rolls back — you only pay for what employees actually redeem.' },
               { title: 'HRIS Integrations', desc: 'Connects with common HRIS and SSO providers. Onboarding and offboarding is automatic.' },
               { title: 'Aggregate Analytics', desc: 'See participation rates, popular categories, and budget utilization — aggregate only, never individual selections.' },
-              { title: 'Monthly Flexibility', desc: 'Employees can change their benefit selections every month. No annual enrollment windows.' },
-              { title: 'Account Redemption', desc: 'Employees select a benefit and Jiibe confirms it in their account.' },
+              { title: 'Monthly Flexibility', desc: 'Employees can change their perk selections every month. No annual enrollment windows.' },
+              { title: 'Account Redemption', desc: 'Employees select a perk and Jiibe confirms it in their account.' },
               { title: 'Security', desc: 'Data encrypted in transit and at rest; SSO support.' },
               { title: 'Quick Setup', desc: 'Connect your HRIS and set a budget — employees are enrolled automatically.' },
               { title: 'Dedicated Support', desc: 'Every account has a named support contact.' },
