@@ -25,7 +25,7 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex gap-3">
               {/* LinkedIn */}
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/company/146943810" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center hover:bg-white/10"
                 style={{ background: 'rgba(255,255,255,0.08)' }}
                 aria-label="LinkedIn">
