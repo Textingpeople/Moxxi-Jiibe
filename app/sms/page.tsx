@@ -17,7 +17,7 @@ const triggerRows = [
 const sampleMessages = [
   'Jiibe: Your benefits account is active. Reply HELP for help, STOP to opt out. Msg & data rates may apply.',
   'Jiibe: Your benefit selection is confirmed. View details in your Jiibe account. Reply STOP to opt out.',
-  'Jiibe: Your monthly benefits budget resets on Nov 1. Reply STOP to opt out, HELP for help.',
+  'Jiibe: Your monthly perks budget resets on Nov 1. Reply STOP to opt out, HELP for help.',
   'Jiibe: New sign-in to your account. If this wasn\'t you, contact support@jiibe.com. Reply STOP to opt out.',
 ];
 
