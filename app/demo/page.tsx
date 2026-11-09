@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { BrandLogo } from '../components/BrandLogo';
+import { CategoryIcon } from '../components/BrandLogo';
 
 export default function DemoPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -65,10 +65,10 @@ export default function DemoPage() {
 
               <div className="space-y-5 mb-10">
                 {[
-                  { icon: '🏪', title: 'Live marketplace walkthrough', desc: 'See Netflix, DoorDash, Uber, UrbanSitter, Rover, and 500+ more benefits in action.' },
-                  { icon: '⚙️', title: 'HR admin demo', desc: 'Watch how easy it is to set budgets, manage employees, and track participation.' },
-                  { icon: '📊', title: 'Analytics & ROI', desc: 'See the dashboards HR teams use to prove benefits ROI to leadership.' },
-                  { icon: '🔗', title: 'HRIS integration', desc: 'We\'ll show you how your existing HRIS connects in minutes.' },
+                  { icon: '🏪', title: 'Catalog walkthrough', desc: 'See the full category catalog and how employees redeem benefits in their account.' },
+                  { icon: '⚙️', title: 'HR admin demo', desc: 'Watch how easy it is to set budgets, manage employees, and view aggregate participation.' },
+                  { icon: '📊', title: 'Aggregate reporting', desc: 'See the dashboards HR teams use to review aggregate participation.' },
+                  { icon: '🔗', title: 'HRIS integration', desc: 'We\'ll show you how your existing HRIS connects.' },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-4">
                     <span className="text-2xl">{item.icon}</span>
@@ -80,12 +80,12 @@ export default function DemoPage() {
                 ))}
               </div>
 
-              {/* Brand logos */}
+              {/* Category highlights */}
               <div>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Benefits we&apos;ll show you</p>
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Categories we&apos;ll show you</p>
                 <div className="flex flex-wrap gap-3">
-                  {['netflix', 'hulu', 'uber', 'doordash', 'urbansitter', 'rover', 'spotify', 'airbnb'].map(brand => (
-                    <BrandLogo key={brand} brand={brand} size={36} />
+                  {['entertainment', 'food', 'travel', 'family', 'pets', 'wellness', 'learning', 'shopping'].map(cat => (
+                    <CategoryIcon key={cat} category={cat} size={36} />
                   ))}
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function DemoPage() {
                       <textarea name="message" value={formData.message} onChange={handleChange}
                         rows={3}
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm resize-none"
-                        placeholder="e.g. How does the Workday integration work? Can we set different budgets by department?" />
+                        placeholder="e.g. How does the HRIS integration work? Can we set different budgets by department?" />
                     </div>
 
                     <button type="submit"
@@ -187,13 +187,13 @@ export default function DemoPage() {
                       <path d="M20 6L9 17l-5-5" />
                     </svg>
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-3">Demo requested!</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-3">Demo requested</h2>
                   <p className="text-gray-500 mb-6 max-w-sm mx-auto">
-                    Thanks, <strong>{formData.firstName}</strong>! We&apos;ll reach out to <strong>{formData.email}</strong> within 1 business day to schedule your demo.
+                    Thanks, <strong>{formData.firstName}</strong>. We&apos;ll reach out to <strong>{formData.email}</strong> within 1 business day to schedule your demo.
                   </p>
                   <div className="p-5 rounded-2xl text-left mb-8" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.12)' }}>
                     <p className="text-sm text-green-800 leading-relaxed">
-                      📅 <strong>What to expect:</strong> A 20-minute video call where we&apos;ll walk you through the full Jiibe experience — the employee marketplace, HR admin dashboard, analytics, and HRIS integrations.
+                      📅 <strong>What to expect:</strong> A 20-minute video call where we&apos;ll walk you through the full Jiibe experience — the employee benefits catalog, HR admin dashboard, analytics, and HRIS integrations.
                     </p>
                     <p className="text-sm text-green-800 leading-relaxed mt-3">
                       Questions in the meantime? Email us at <a href="mailto:sales@jiibe.com" className="underline font-semibold">sales@jiibe.com</a>

@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Terms of Service — Jiibe',
+};
 
 export default function TermsPage() {
   return (
@@ -15,7 +20,7 @@ export default function TermsPage() {
             Terms of Service
           </div>
           <h1 className="text-5xl font-bold text-gray-900 tracking-tight mb-4">Terms of Service</h1>
-          <p className="text-lg text-gray-500">Last Updated: October 7, 2026</p>
+          <p className="text-lg text-gray-500">Last Updated: November 9, 2026</p>
         </div>
       </section>
 
@@ -35,7 +40,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
             <p className="text-gray-600 leading-relaxed">
-              Jiibe is an employee lifestyle benefits platform that allows employees to browse and redeem lifestyle benefits from a curated marketplace of 500+ brands, including entertainment (Netflix, Hulu, Spotify), food delivery (DoorDash, Uber Eats), transportation (Uber), childcare (UrbanSitter), pet care (Rover), travel, wellness, learning, and shopping benefits. Employers use the platform to set monthly per-employee benefit budgets and track participation.
+              Jiibe is an employer-funded lifestyle-benefits marketplace. Employers (HR teams) set a monthly per-employee benefits budget. Employees choose from a curated catalog of lifestyle benefits across 15 categories and redeem them in their Jiibe account. Employers see aggregate participation only. Jiibe is available only to employees of companies enrolled in a Jiibe benefits program; there is no public or consumer signup. Jiibe is not a bank, lender, insurer, or healthcare provider, and is not affiliated with or endorsed by any third-party brand.
             </p>
           </div>
 
@@ -59,46 +64,61 @@ export default function TermsPage() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Benefits Marketplace</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Benefits Catalog</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The Jiibe marketplace provides access to lifestyle benefits from third-party providers. By using the marketplace, you acknowledge and agree that:
+              The Jiibe catalog provides access to lifestyle benefits from third-party providers. By using the catalog, you acknowledge and agree that:
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
-              <li>Benefit availability may change at any time based on partner agreements</li>
+              <li>Benefit availability may change at any time based on provider agreements</li>
               <li>Third-party benefit providers have their own terms of service and privacy policies</li>
               <li>Jiibe is not responsible for the quality, availability, or fulfillment of third-party benefits</li>
               <li>Monthly benefit budgets are set by your employer and may be adjusted at any time</li>
-              <li>Unused monthly stipend funds roll back to your employer at the end of each month</li>
+              <li>Unused monthly budget rolls back to your employer at the end of each month</li>
               <li>Benefit redemptions are generally non-refundable once processed</li>
             </ul>
+            <p className="text-gray-500 text-sm leading-relaxed mt-4">
+              Available benefits vary by employer program. Jiibe is not a bank, lender, insurer, or healthcare provider. Third-party brand names are trademarks of their respective owners; Jiibe is not affiliated with or endorsed by any third-party brand.
+            </p>
           </div>
 
-          <div>
+          <div id="sms">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">5. SMS Communications — Transactional Account Alerts</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              By providing your phone number and checking the SMS opt-in box during account registration, you expressly consent to receive <strong>transactional account alert text messages</strong> from Jiibe. These messages are limited to account-related notifications and benefit activity alerts, including:
+              Jiibe&apos;s SMS program sends automated, system-triggered transactional account alerts to users who opt in. We do not send marketing or promotional text messages. By providing your phone number and checking the SMS opt-in box during account registration, you expressly consent to receive transactional account alert text messages from Jiibe, limited to:
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2">
-              <li>Account registration confirmations and onboarding instructions</li>
-              <li>Benefit redemption confirmations and access codes</li>
-              <li>Monthly balance reminders and stipend reset notifications</li>
-              <li>New benefit availability announcements</li>
-              <li>Account security and access notifications</li>
+              <li>Account registration and onboarding confirmations</li>
+              <li>Benefit redemption confirmations and access code notices</li>
+              <li>Monthly budget reminders and reset notices</li>
+              <li>Account security and sign-in alerts</li>
             </ul>
             <div className="mt-4 p-4 rounded-xl" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.15)' }}>
               <p className="text-sm text-green-800 font-semibold mb-2">Important SMS Disclosures:</p>
               <ul className="text-sm text-green-800 space-y-1">
                 <li>• <strong>Message and data rates may apply.</strong></li>
-                <li>• Message frequency varies based on your account activity.</li>
-                <li>• To opt out at any time, reply <strong>STOP</strong> to any message.</li>
-                <li>• For help, reply <strong>HELP</strong> or contact <a href="mailto:support@jiibe.com" className="underline">support@jiibe.com</a>.</li>
-                <li>• Opting in to SMS is optional and not required to use the Service.</li>
+                <li>• Message frequency varies based on account activity.</li>
+                <li>• To opt out at any time, reply <strong>STOP</strong>.</li>
+                <li>• Reply <strong>START</strong> to resubscribe.</li>
+                <li>• For help, reply <strong>HELP</strong> or email <a href="mailto:support@jiibe.com" className="underline">support@jiibe.com</a>.</li>
+                <li>• Opting in is optional and not required to use the Service.</li>
+                <li>• Consent is not a condition of purchase.</li>
                 <li>• <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong></li>
               </ul>
             </div>
             <p className="text-gray-600 leading-relaxed mt-4">
               These SMS messages are strictly transactional in nature. We do not send marketing, promotional, or advertising text messages. Your consent to receive SMS is separate from your agreement to these Terms and may be withdrawn at any time without affecting your access to the Service.
             </p>
+            <p className="text-sm font-semibold text-gray-900 mt-5 mb-2">Sample messages:</p>
+            <div className="space-y-2">
+              {[
+                'Jiibe: Your benefits account is active. Reply HELP for help, STOP to opt out. Msg & data rates may apply.',
+                'Jiibe: Your benefit selection is confirmed. View details in your Jiibe account. Reply STOP to opt out.',
+                'Jiibe: Your monthly benefits budget resets on Nov 1. Reply STOP to opt out, HELP for help.',
+                'Jiibe: New sign-in to your account. If this wasn\'t you, contact support@jiibe.com. Reply STOP to opt out.',
+              ].map(msg => (
+                <p key={msg} className="text-sm text-gray-600 font-mono bg-gray-50 rounded-lg p-3 border border-gray-100">{msg}</p>
+              ))}
+            </div>
           </div>
 
           <div>
@@ -132,7 +152,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Intellectual Property</h2>
             <p className="text-gray-600 leading-relaxed">
-              The Service and its original content, features, and functionality are owned by Jiibe, Inc. and are protected by applicable intellectual property laws. You may not copy, modify, distribute, sell, or create derivative works based on the Service without our express written permission. Third-party brand names, logos, and trademarks displayed in the benefits marketplace are the property of their respective owners.
+              The Service and its original content, features, and functionality are owned by Jiibe LLC and are protected by applicable intellectual property laws. You may not copy, modify, distribute, sell, or create derivative works based on the Service without our express written permission. Third-party brand names, logos, and trademarks displayed in the benefits catalog are the property of their respective owners; Jiibe is not affiliated with or endorsed by any third-party brand.
             </p>
           </div>
 
@@ -146,17 +166,17 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Disclaimer of Warranties</h2>
             <p className="text-gray-600 leading-relaxed">
-              THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. PERKPORTAL DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+              THE SERVICE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. JIIBE LLC DOES NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              Jiibe does not guarantee the availability, quality, or fulfillment of any third-party benefits offered through the marketplace. Third-party benefit providers are solely responsible for their products and services.
+              Jiibe does not guarantee the availability, quality, or fulfillment of any third-party benefits offered through the catalog. Third-party benefit providers are solely responsible for their products and services.
             </p>
           </div>
 
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Limitation of Liability</h2>
             <p className="text-gray-600 leading-relaxed">
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, PERKPORTAL, INC. SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR GOODWILL, EVEN IF PERKPORTAL HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+              TO THE MAXIMUM EXTENT PERMITTED BY LAW, JIIBE LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR GOODWILL, EVEN IF JIIBE LLC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               Our total liability to you for any claims arising from your use of the Service shall not exceed the amount paid by your employer for your benefit access in the three months preceding the claim.
@@ -166,7 +186,7 @@ export default function TermsPage() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Indemnification</h2>
             <p className="text-gray-600 leading-relaxed">
-              You agree to indemnify, defend, and hold harmless Jiibe, Inc. and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your access to or use of the Service, your violation of these Terms, or your violation of any rights of another party.
+              You agree to indemnify, defend, and hold harmless Jiibe LLC and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses arising out of or in any way connected with your access to or use of the Service, your violation of these Terms, or your violation of any rights of another party.
             </p>
           </div>
 
@@ -197,8 +217,9 @@ export default function TermsPage() {
               <p className="text-gray-600 mb-4">If you have questions about these Terms, please contact us:</p>
               <div className="space-y-2">
                 <p className="text-gray-600"><strong>Email:</strong> <a href="mailto:support@jiibe.com" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>support@jiibe.com</a></p>
-                <p className="text-gray-600"><strong>Address:</strong> Jiibe, Inc., 213 N Market Street #1150 Wilmington, DE 19801</p>
-                <p className="text-gray-600"><strong>Website:</strong> <a href="/" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>jiibe.com</a></p>
+                <p className="text-gray-600"><strong>Phone:</strong> <a href="tel:+13023024972" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>(302) 302-4972</a></p>
+                <p className="text-gray-600"><strong>Address:</strong> Jiibe LLC, 213 N Market Street #1150, Wilmington, DE 19801</p>
+                <p className="text-gray-600"><strong>Website:</strong> <Link href="/" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>jiibe.com</Link></p>
               </div>
             </div>
           </div>

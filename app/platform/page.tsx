@@ -1,7 +1,12 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { BrandLogo } from '../components/BrandLogo';
+import { CategoryIcon } from '../components/BrandLogo';
+
+export const metadata: Metadata = {
+  title: 'Platform — Jiibe',
+};
 
 export default function PlatformPage() {
   return (
@@ -22,7 +27,7 @@ export default function PlatformPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Jiibe replaces complicated benefit packages with a simple marketplace. HR sets a budget. Employees choose what they love. Done.
+            Employees browse a curated catalog organized by category, redeem in their account, and can change selections every month.
           </p>
         </div>
       </section>
@@ -35,13 +40,13 @@ export default function PlatformPage() {
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#1a4731' }}>Employee Experience</p>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">A marketplace employees actually want to use.</h2>
               <p className="text-lg text-gray-500 mb-6 leading-relaxed">
-                Employees log in, browse 500+ benefits organized by category, and redeem what fits their life. No paperwork. No waiting. Instant access.
+                Employees log in, browse the catalog organized by category, and redeem what fits their life in their Jiibe account.
               </p>
               <div className="space-y-3">
                 {[
                   'Browse by category — streaming, food, travel, wellness, and more',
-                  'See your monthly balance and remaining stipend at a glance',
-                  'Redeem in one click — get codes or credits instantly',
+                  'See your monthly balance and remaining budget at a glance',
+                  'Select a benefit and Jiibe confirms it in your account',
                   'Change selections every month with no lock-in',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
@@ -72,16 +77,16 @@ export default function PlatformPage() {
               </div>
 
               {/* Active benefits */}
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Active Benefits</p>
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Active Benefits <span className="text-gray-300 normal-case">· Sample</span></p>
               <div className="space-y-2 mb-5">
                 {[
-                  { key: 'netflix', name: 'Netflix Premium', cost: '$22.99', status: 'Active' },
-                  { key: 'doordash', name: 'DoorDash Credits', cost: '$40.00', status: 'Active' },
-                  { key: 'rover', name: 'Rover Dog Walking', cost: '$40.00', status: 'Active' },
+                  { key: 'entertainment', name: 'Streaming subscription', cost: '$22.99', status: 'Active' },
+                  { key: 'food', name: 'Food delivery credits', cost: '$40.00', status: 'Active' },
+                  { key: 'pets', name: 'Dog walking', cost: '$40.00', status: 'Active' },
                 ].map(b => (
                   <div key={b.key} className="flex items-center justify-between p-3 rounded-xl" style={{ background: 'rgba(0,0,0,0.03)' }}>
                     <div className="flex items-center gap-3">
-                      <BrandLogo brand={b.key} size={32} />
+                      <CategoryIcon category={b.key} size={32} />
                       <div>
                         <p className="text-sm font-semibold text-gray-900">{b.name}</p>
                         <p className="text-xs text-gray-400">{b.cost}/mo</p>
@@ -98,12 +103,12 @@ export default function PlatformPage() {
               <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Browse More Benefits</p>
               <div className="grid grid-cols-3 gap-2">
                 {[
-                  { key: 'spotify', name: 'Spotify' },
-                  { key: 'classpass', name: 'ClassPass' },
-                  { key: 'coursera', name: 'Coursera' },
+                  { key: 'wellness', name: 'Wellness' },
+                  { key: 'learning', name: 'Learning' },
+                  { key: 'travel', name: 'Travel' },
                 ].map(b => (
                   <div key={b.key} className="p-3 rounded-xl text-center border border-gray-100 hover:border-gray-200 transition-colors cursor-pointer">
-                    <BrandLogo brand={b.key} size={32} className="mx-auto mb-1.5" />
+                    <CategoryIcon category={b.key} size={32} className="mx-auto mb-1.5" />
                     <p className="text-xs text-gray-600 font-medium">{b.name}</p>
                   </div>
                 ))}
@@ -125,20 +130,20 @@ export default function PlatformPage() {
               {
                 num: '01',
                 title: 'HR sets the budget',
-                desc: 'Choose a monthly per-employee stipend. Connect your HRIS and employees are automatically enrolled.',
-                detail: 'Average setup time: 15 minutes',
+                desc: 'Choose a monthly per-employee budget. Connect your HRIS and employees are automatically enrolled.',
+                detail: 'Quick setup',
               },
               {
                 num: '02',
                 title: 'Employees choose',
-                desc: 'Employees log in and browse 500+ lifestyle benefits. They pick what fits their life. Selections can change every month.',
-                detail: 'Average time to first redemption: 3 minutes',
+                desc: 'Employees log in and browse the lifestyle benefits catalog. They pick what fits their life. Selections can change every month.',
+                detail: 'Redeemed in the employee\'s account',
               },
               {
                 num: '03',
                 title: 'Track and optimize',
-                desc: 'Real-time dashboards show participation rates, most popular benefits, and budget utilization.',
-                detail: 'Average participation rate: 94%',
+                desc: 'Aggregate dashboards show participation rates, popular categories, and budget utilization.',
+                detail: 'Aggregate-only reporting',
               },
             ].map((step, i) => (
               <div key={step.num} className="relative">
@@ -169,7 +174,7 @@ export default function PlatformPage() {
             <div className="glass-card p-6">
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-100">
                 <div>
-                  <p className="text-xs text-gray-400 uppercase tracking-wider">HR Dashboard</p>
+                  <p className="text-xs text-gray-400 uppercase tracking-wider">HR Dashboard <span className="text-gray-300 normal-case">· Sample dashboard</span></p>
                   <p className="text-lg font-bold text-gray-900 mt-0.5">October 2026</p>
                 </div>
                 <span className="text-xs font-semibold px-3 py-1.5 rounded-full text-green-700" style={{ background: 'rgba(26,71,49,0.08)' }}>
@@ -180,10 +185,10 @@ export default function PlatformPage() {
               {/* Stats grid */}
               <div className="grid grid-cols-2 gap-3 mb-5">
                 {[
-                  { label: 'Participation Rate', value: '94%', trend: '+8% vs last month' },
+                  { label: 'Participation', value: 'Aggregate', trend: 'View in dashboard' },
                   { label: 'Budget Utilized', value: '$34.2K', trend: 'of $37K budget' },
-                  { label: 'Avg. Satisfaction', value: '4.8 / 5', trend: 'Employee rating' },
-                  { label: 'Setup Time', value: '14 min', trend: 'One-time setup' },
+                  { label: 'Categories Used', value: '15', trend: 'Full catalog access' },
+                  { label: 'Setup', value: 'Quick', trend: 'One-time setup' },
                 ].map(stat => (
                   <div key={stat.label} className="p-3 rounded-xl" style={{ background: 'rgba(0,0,0,0.03)' }}>
                     <p className="text-xs text-gray-400 mb-1">{stat.label}</p>
@@ -194,15 +199,15 @@ export default function PlatformPage() {
               </div>
 
               {/* Top benefits */}
-              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Top Benefits This Month</p>
+              <p className="text-xs text-gray-400 uppercase tracking-wider font-medium mb-3">Top Categories This Month</p>
               <div className="space-y-2">
                 {[
-                  { key: 'doordash', name: 'DoorDash', pct: 68 },
-                  { key: 'netflix', name: 'Netflix', pct: 54 },
-                  { key: 'uber', name: 'Uber', pct: 41 },
+                  { key: 'food', name: 'Food delivery', pct: 68 },
+                  { key: 'entertainment', name: 'Entertainment', pct: 54 },
+                  { key: 'travel', name: 'Travel', pct: 41 },
                 ].map(b => (
                   <div key={b.key} className="flex items-center gap-3">
-                    <BrandLogo brand={b.key} size={24} />
+                    <CategoryIcon category={b.key} size={24} />
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
                         <p className="text-xs font-medium text-gray-900">{b.name}</p>
@@ -219,15 +224,15 @@ export default function PlatformPage() {
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: '#1a4731' }}>HR Admin View</p>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Real-time visibility into what&apos;s working.</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Aggregate visibility into what&apos;s working.</h2>
               <p className="text-lg text-gray-500 mb-6 leading-relaxed">
-                See participation rates, budget utilization, and employee satisfaction in one dashboard. Know exactly which benefits your team loves.
+                See aggregate participation and budget utilization in one dashboard. Know which categories employees choose most.
               </p>
               <div className="space-y-3">
                 {[
-                  'Participation rate by department and benefit category',
+                  'Aggregate participation by department and benefit category',
                   'Budget utilization and rollback tracking',
-                  'Employee satisfaction scores and feedback',
+                  'Aggregate-only reporting — no individual employee selections shown',
                   'Export reports for leadership presentations',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3">
@@ -251,27 +256,22 @@ export default function PlatformPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Works with your existing stack</h2>
-            <p className="text-lg text-gray-500">Connect Jiibe to the tools you already use. Setup is automatic.</p>
+            <p className="text-lg text-gray-500">Connects with common HRIS and SSO providers.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
-              { key: 'workday', name: 'Workday', category: 'HRIS' },
-              { key: 'bamboohr', name: 'BambooHR', category: 'HRIS' },
-              { key: 'rippling', name: 'Rippling', category: 'HRIS' },
-              { key: 'adp', name: 'ADP', category: 'HRIS' },
-              { key: 'gusto', name: 'Gusto', category: 'HRIS' },
-              { key: 'okta', name: 'Okta', category: 'SSO' },
-              { key: 'slack', name: 'Slack', category: 'Notifications' },
-              { key: 'linkedin', name: 'LinkedIn', category: 'Directory' },
-            ].map(integration => (
-              <div key={integration.key} className="glass-card p-5 text-center">
-                <BrandLogo brand={integration.key} size={40} className="mx-auto mb-3" />
+              { key: 'tech', name: 'HRIS sync', category: 'Onboarding' },
+              { key: 'tech', name: 'SSO', category: 'Sign-in' },
+              { key: 'tech', name: 'Directory sync', category: 'Employees' },
+              { key: 'tech', name: 'Notifications', category: 'Alerts' },
+            ].map((integration, i) => (
+              <div key={integration.name + i} className="glass-card p-5 text-center">
+                <CategoryIcon category={integration.key} label={integration.name} size={40} className="mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 text-sm">{integration.name}</p>
                 <p className="text-xs text-gray-400 mt-0.5">{integration.category}</p>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-gray-400">+ 20 more integrations including Workday, SAP, Oracle HCM, and more</p>
         </div>
       </section>
 
@@ -283,15 +283,15 @@ export default function PlatformPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: '500+ Benefits Marketplace', desc: 'Netflix, Hulu, Uber, DoorDash, UrbanSitter, Rover, Spotify, Airbnb, ClassPass, Coursera, and hundreds more.' },
-              { title: 'Flexible Budgets', desc: 'Set any monthly stipend per employee. Unused funds roll back — you only pay for what employees actually redeem.' },
-              { title: 'HRIS Integrations', desc: 'Connects with Workday, BambooHR, Rippling, ADP, Gusto, and 20+ more. Onboarding and offboarding is automatic.' },
-              { title: 'Real-Time Analytics', desc: 'See participation rates, most popular benefits, budget utilization, and employee satisfaction scores.' },
+              { title: 'Curated Benefits Catalog', desc: '15 lifestyle categories covering entertainment, food, travel, family, pets, wellness, learning, and more.' },
+              { title: 'Flexible Budgets', desc: 'Set any monthly budget per employee. Unused budget rolls back — you only pay for what employees actually redeem.' },
+              { title: 'HRIS Integrations', desc: 'Connects with common HRIS and SSO providers. Onboarding and offboarding is automatic.' },
+              { title: 'Aggregate Analytics', desc: 'See participation rates, popular categories, and budget utilization — aggregate only, never individual selections.' },
               { title: 'Monthly Flexibility', desc: 'Employees can change their benefit selections every month. No annual enrollment windows.' },
-              { title: 'Instant Redemption', desc: 'Employees receive access codes, credits, or subscriptions instantly — no waiting, no paperwork.' },
-              { title: 'Enterprise Security', desc: 'SOC 2 Type II certified. Data encrypted in transit and at rest. SSO support for all major providers.' },
-              { title: 'Global Ready', desc: 'Support for employees in 30+ countries with local benefit options and multi-currency support.' },
-              { title: 'Dedicated Support', desc: 'Every account gets a dedicated customer success manager. Average response time: under 2 hours.' },
+              { title: 'Account Redemption', desc: 'Employees select a benefit and Jiibe confirms it in their account.' },
+              { title: 'Security', desc: 'Data encrypted in transit and at rest; SSO support.' },
+              { title: 'Quick Setup', desc: 'Connect your HRIS and set a budget — employees are enrolled automatically.' },
+              { title: 'Dedicated Support', desc: 'Every account has a named support contact.' },
             ].map(feature => (
               <div key={feature.title} className="glass-card p-6">
                 <div className="w-8 h-8 rounded-lg mb-4 flex items-center justify-center"

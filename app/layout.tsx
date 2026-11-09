@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Jiibe — Employee Lifestyle Benefits Platform',
-  description: 'Give your team the perks they actually want. Netflix, Hulu, Uber, DoorDash, UrbanSitter, Rover, and 500+ more lifestyle benefits — all in one platform HR teams love.',
-  keywords: 'employee benefits, lifestyle benefits, perks platform, HR benefits, Netflix, Hulu, Uber, DoorDash, employee perks',
+  title: 'Jiibe — Employer-Funded Lifestyle Benefits',
+  description: 'Jiibe is a lifestyle-benefits marketplace employers offer their teams. HR sets a monthly budget; employees choose benefits across 15 categories.',
+  keywords: 'employer-funded benefits, lifestyle benefits, benefits marketplace, HR benefits, employee benefits platform',
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },

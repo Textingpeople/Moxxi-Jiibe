@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — Jiibe',
+};
 
 export default function PrivacyPage() {
   return (
@@ -15,7 +20,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </div>
           <h1 className="text-5xl font-bold text-gray-900 tracking-tight mb-4">Privacy Policy</h1>
-          <p className="text-lg text-gray-500">Last Updated: October 7, 2026</p>
+          <p className="text-lg text-gray-500">Last Updated: November 9, 2026</p>
         </div>
       </section>
 
@@ -45,7 +50,7 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-600 leading-relaxed">
-                Jiibe, Inc. (&quot;Jiibe,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our employee lifestyle benefits platform, including our website at jiibe.com and our employee portal.
+                Jiibe LLC (&quot;Jiibe,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our employer-funded lifestyle-benefits marketplace, including our website at jiibe.com and our employee account portal.
               </p>
               <p className="text-gray-600 leading-relaxed mt-4">
                 By using Jiibe, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms of this Privacy Policy, please do not access or use our platform.
@@ -70,7 +75,7 @@ export default function PrivacyPage() {
               <div className="p-4 rounded-xl" style={{ background: 'rgba(239,68,68,0.05)', border: '1px solid rgba(239,68,68,0.2)' }}>
                 <p className="text-sm font-bold text-red-800 mb-2">No Mobile Data Sharing Policy</p>
                 <p className="text-sm text-red-700">
-                  <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> All categories of mobile information are excluded from sharing with third-party marketers. We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as providing our benefits platform and sending transactional account alert SMS messages to users who have explicitly opted in.
+                  <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> All categories of mobile information are excluded from sharing with third-party marketers. We are committed to protecting your mobile information and will only use it for the purposes outlined in this Privacy Policy, such as providing our benefits platform and sending transactional account alert SMS messages to users who have explicitly opted in. Text messaging originator opt-in data and consent will not be shared with any third parties, including benefit providers. All the above categories exclude text messaging originator opt-in data and consent.
                 </p>
               </div>
 
@@ -139,11 +144,12 @@ export default function PrivacyPage() {
               <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.2 Your Employer</h3>
               <p className="text-gray-600">Aggregate benefits participation data as described in Section 4. We do not share individual employee personal data with employers beyond what is necessary to administer the benefits program.</p>
 
-              <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.3 Benefit Partners</h3>
-              <p className="text-gray-600">When you redeem a benefit (e.g., Netflix, DoorDash, Rover), we share only the information necessary to fulfill that redemption with the applicable benefit partner.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.3 Benefit Providers</h3>
+              <p className="text-gray-600">When you redeem a benefit, we share only the information necessary to fulfill that redemption with the applicable benefit provider. Text messaging originator opt-in data and consent will not be shared with any third parties, including benefit providers.</p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.4 Legal Requirements</h3>
               <p className="text-gray-600">When required by law, court order, or government regulation, or to protect the rights, property, or safety of Jiibe, our users, or the public.</p>
+              <p className="text-gray-600 mt-4">Text messaging originator opt-in data and consent will not be shared with any third parties, including benefit providers. All the above categories exclude text messaging originator opt-in data and consent.</p>
 
               <h3 className="text-xl font-semibold text-gray-900 mt-4 mb-2">5.5 Business Transfers</h3>
               <p className="text-gray-600">In connection with a merger, acquisition, or sale of assets, your information may be transferred. We will notify you before your information is transferred and becomes subject to a different privacy policy.</p>
@@ -156,10 +162,9 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 text-gray-600 space-y-2">
                 <li>Account registration and onboarding confirmations</li>
-                <li>Benefit redemption confirmations and access codes</li>
-                <li>Monthly balance reminders and reset notifications</li>
-                <li>New benefit availability alerts</li>
-                <li>Account security notifications</li>
+                <li>Benefit redemption confirmations and access code notices</li>
+                <li>Monthly budget reminders and reset notices</li>
+                <li>Account security and sign-in alerts</li>
               </ul>
               <div className="mt-4 p-4 rounded-xl" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.15)' }}>
                 <p className="text-sm font-semibold text-green-800 mb-2">SMS Disclosures:</p>
@@ -168,9 +173,10 @@ export default function PrivacyPage() {
                   <li>• <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong></li>
                   <li>• Message and data rates may apply.</li>
                   <li>• Message frequency varies based on account activity.</li>
-                  <li>• To opt out at any time, reply <strong>STOP</strong> to any message.</li>
+                  <li>• To opt out at any time, reply <strong>STOP</strong>. Reply <strong>START</strong> to resubscribe.</li>
                   <li>• For help, reply <strong>HELP</strong> or contact support@jiibe.com.</li>
                   <li>• SMS opt-in is optional and not required to use the Jiibe platform.</li>
+                  <li>• Consent is not a condition of purchase.</li>
                 </ul>
               </div>
             </div>
@@ -249,8 +255,9 @@ export default function PrivacyPage() {
                 <p className="text-gray-600 mb-4">If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
                 <div className="space-y-2">
                   <p className="text-gray-600"><strong>Email:</strong> <a href="mailto:support@jiibe.com" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>support@jiibe.com</a></p>
-                  <p className="text-gray-600"><strong>Address:</strong> Jiibe, Inc., 213 N Market Street #1150 Wilmington, DE 19801</p>
-                  <p className="text-gray-600"><strong>Website:</strong> <a href="/" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>jiibe.com</a></p>
+                  <p className="text-gray-600"><strong>Phone:</strong> <a href="tel:+13023024972" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>(302) 302-4972</a></p>
+                  <p className="text-gray-600"><strong>Address:</strong> Jiibe LLC, 213 N Market Street #1150, Wilmington, DE 19801</p>
+                  <p className="text-gray-600"><strong>Website:</strong> <Link href="/" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>jiibe.com</Link></p>
                 </div>
               </div>
             </div>

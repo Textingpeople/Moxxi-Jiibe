@@ -36,6 +36,7 @@ export default function Nav() {
             { label: 'Platform', href: '/platform' },
             { label: 'For HR Teams', href: '/for-hr' },
             { label: 'Pricing', href: '/pricing' },
+            { label: 'About', href: '/about' },
           ].map(item => (
             <Link key={item.href} href={item.href}
               className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 rounded-lg hover:bg-black/5 transition-all">
@@ -73,6 +74,7 @@ export default function Nav() {
             { label: 'Platform', href: '/platform' },
             { label: 'For HR Teams', href: '/for-hr' },
             { label: 'Pricing', href: '/pricing' },
+            { label: 'About', href: '/about' },
             { label: 'Employee Login', href: '/login' },
           ].map(item => (
             <Link key={item.href} href={item.href}

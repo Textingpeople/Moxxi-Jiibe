@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Pricing — Jiibe',
+};
 
 const plans = [
   {
@@ -8,11 +13,11 @@ const plans = [
     price: '$8',
     period: 'per employee/mo',
     desc: 'Perfect for small teams getting started with lifestyle benefits.',
-    stipend: 'Up to $100/employee/mo stipend',
+    stipend: 'Up to $100/employee/mo budget',
     features: [
-      '500+ benefits marketplace',
+      'Full benefits catalog',
       'Up to 50 employees',
-      'Monthly stipend management',
+      'Monthly budget management',
       'Basic analytics dashboard',
       'Email support',
       'Standard HRIS integrations',
@@ -26,16 +31,16 @@ const plans = [
     price: '$6',
     period: 'per employee/mo',
     desc: 'For growing companies that want more flexibility and insights.',
-    stipend: 'Up to $200/employee/mo stipend',
+    stipend: 'Up to $200/employee/mo budget',
     features: [
       'Everything in Starter',
       'Up to 500 employees',
-      'Custom stipend amounts by group',
-      'Advanced analytics & ROI reporting',
+      'Custom budget amounts by group',
+      'Advanced aggregate reporting',
       'Priority support',
       'All HRIS integrations',
-      'Slack notifications',
-      'SSO (Okta, Google)',
+      'Team notifications',
+      'SSO support',
     ],
     cta: 'Book a Demo',
     href: '/demo',
@@ -45,18 +50,15 @@ const plans = [
     name: 'Enterprise',
     price: 'Custom',
     period: 'contact us',
-    desc: 'For large organizations with complex needs and global teams.',
-    stipend: 'Unlimited stipend amounts',
+    desc: 'For large organizations with complex needs and teams of any size.',
+    stipend: 'Unlimited budget amounts',
     features: [
       'Everything in Growth',
       'Unlimited employees',
-      'Global benefits (30+ countries)',
       'Custom benefit curation',
       'Dedicated customer success manager',
       'SLA guarantees',
       'Custom integrations',
-      'SOC 2 Type II compliance',
-      'Multi-currency support',
     ],
     cta: 'Contact Sales',
     href: '/demo',
@@ -83,7 +85,7 @@ export default function PricingPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-4">
-            Jiibe charges a small platform fee per employee. The benefit stipend you set is separate — and unused stipends roll back to you every month.
+            Jiibe charges a small platform fee per employee. The monthly benefits budget you set is separate — and unused budget rolls back to you every month.
           </p>
           <p className="text-sm text-gray-400">No setup fees. No annual contracts required. Cancel anytime.</p>
         </div>
@@ -149,19 +151,19 @@ export default function PricingPage() {
             {[
               {
                 title: 'Platform fee',
-                desc: 'You pay a small monthly fee per active employee for access to the Jiibe platform, marketplace, analytics, and support.',
+                desc: 'You pay a small monthly fee per active employee for access to the Jiibe platform, catalog, analytics, and support.',
                 example: 'Example: 100 employees × $6/mo = $600/mo platform fee',
                 icon: '🏪',
               },
               {
-                title: 'Benefit stipend',
-                desc: 'You set a monthly stipend per employee (e.g., $100/mo). Employees spend it on benefits they choose. Unused stipend rolls back to you.',
-                example: 'Example: 100 employees × $100 stipend = up to $10,000/mo in benefits',
+                title: 'Monthly benefits budget',
+                desc: 'You set a monthly budget per employee (e.g., $100/mo). Employees spend it on benefits they choose. Unused budget rolls back to you.',
+                example: 'Example: 100 employees × $100 budget = up to $10,000/mo in benefits',
                 icon: '💳',
               },
               {
                 title: 'Only pay for what\'s used',
-                desc: 'If an employee doesn\'t redeem their full stipend, the unused amount rolls back to your account at the end of the month.',
+                desc: 'If an employee doesn\'t redeem their full budget, the unused amount rolls back to your account at the end of the month.',
                 example: 'Example: Employee uses $75 of $100 → you\'re only charged $75',
                 icon: '💰',
               },
@@ -193,12 +195,12 @@ export default function PricingPage() {
           </div>
           <div className="glass-card p-8 space-y-6">
             {[
-              { q: 'Is there a free trial?', a: 'Yes! All plans include a 30-day free trial. No credit card required to start.' },
+              { q: 'Is there a free trial?', a: 'Yes. All plans include a 30-day free trial. No credit card required to start.' },
               { q: 'Can I change plans?', a: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of the next billing cycle.' },
-              { q: 'What happens to unused stipend?', a: 'Unused monthly stipend rolls back to your company account at the end of each month. You only pay for benefits employees actually redeem.' },
-              { q: 'Are there annual discounts?', a: 'Yes! Annual billing saves 20% compared to monthly billing. Contact us for annual pricing.' },
-              { q: 'Can I set different stipend amounts for different employee groups?', a: 'Yes, on Growth and Enterprise plans you can set different stipend amounts for different employee groups (e.g., full-time vs. part-time, different departments).' },
-              { q: 'Is there a minimum number of employees?', a: 'No minimum. Jiibe works for teams of any size, from 5 employees to 50,000+.' },
+              { q: 'What happens to unused budget?', a: 'Unused monthly budget rolls back to your company account at the end of each month. You only pay for benefits employees actually redeem.' },
+              { q: 'Are there annual discounts?', a: 'Yes. Annual billing saves 20% compared to monthly billing. Contact us for annual pricing.' },
+              { q: 'Can I set different budget amounts for different employee groups?', a: 'Yes, on Growth and Enterprise plans you can set different budget amounts for different employee groups (e.g., full-time vs. part-time, different departments).' },
+              { q: 'Is there a minimum number of employees?', a: 'No minimum. Jiibe works for teams of any size.' },
             ].map(faq => (
               <div key={faq.q} className="border-b border-gray-100 last:border-0 pb-6 last:pb-0">
                 <p className="font-semibold text-gray-900 mb-2">{faq.q}</p>

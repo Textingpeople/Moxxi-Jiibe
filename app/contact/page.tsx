@@ -149,7 +149,7 @@ export default function ContactPage() {
                       <path d="M20 6L9 17l-5-5" />
                     </svg>
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-3">Message sent!</h2>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-3">Message sent</h2>
                   <p className="text-gray-500 mb-8 max-w-sm mx-auto">
                     Thanks for reaching out! We&apos;ll get back to you at <strong>{formData.email}</strong> within 1 business day.
                   </p>

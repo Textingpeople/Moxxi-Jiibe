@@ -10,6 +10,7 @@ type Step = 1 | 2 | 3;
 export default function SignupPage() {
   const [step, setStep] = useState<Step>(1);
   const [companyIdError, setCompanyIdError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   const [formData, setFormData] = useState({
     companyId: '',
     firstName: '',
@@ -19,7 +20,6 @@ export default function SignupPage() {
     jobTitle: '',
     department: '',
     smsOptIn: false,
-    smsMarketingOptIn: false,
     termsAccepted: false,
   });
 
@@ -27,6 +27,8 @@ export default function SignupPage() {
     const target = e.target as HTMLInputElement;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     setFormData({ ...formData, [e.target.name]: value });
+    if (e.target.name === 'phone' && value) setPhoneError('');
+    if (e.target.name === 'smsOptIn' && !value) setPhoneError('');
   };
 
   const nextStep = () => setStep((s) => Math.min(s + 1, 3) as Step);
@@ -34,6 +36,11 @@ export default function SignupPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (formData.smsOptIn && !formData.phone.trim()) {
+      setPhoneError('Enter a mobile number to receive text alerts.');
+      return;
+    }
+    setPhoneError('');
     nextStep();
   };
 
@@ -61,7 +68,10 @@ export default function SignupPage() {
             Access Your Benefits
           </h1>
           <p className="text-lg text-gray-500">
-            Your employer has set up a Jiibe benefits program. Use your Company ID to get started and choose from Netflix, Uber, DoorDash, Rover, and 500+ more.
+            Your employer has set up a Jiibe benefits program. Use your Company ID to get started.
+          </p>
+          <p className="text-sm text-gray-400 mt-3">
+            Jiibe is available only to employees of enrolled companies.
           </p>
         </div>
       </section>
@@ -97,7 +107,7 @@ export default function SignupPage() {
           {step === 1 && (
             <form onSubmit={(e) => {
               e.preventDefault();
-              const VALID_IDS = ['1234', 'DEMO', 'TEST', 'PERK'];
+              const VALID_IDS = ['1234', 'DEMO', 'TEST'];
               if (!VALID_IDS.includes(formData.companyId.trim().toUpperCase())) {
                 setCompanyIdError('Company ID not found. Please check with your HR team or manager.');
                 return;
@@ -192,11 +202,17 @@ export default function SignupPage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone Number (Optional)</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  Phone Number {formData.smsOptIn ? <span className="text-red-500">*</span> : <span className="text-gray-400 font-normal">(Optional)</span>}
+                </label>
                 <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl bg-white text-sm"
+                  className={`w-full px-4 py-3 border rounded-xl bg-white text-sm ${phoneError ? 'border-red-300' : 'border-gray-200'}`}
                   placeholder="(555) 123-4567" />
-                <p className="text-xs text-gray-400 mt-1">Required only if you want SMS benefit alerts</p>
+                {phoneError ? (
+                  <p className="text-red-500 text-xs mt-1 font-medium">{phoneError}</p>
+                ) : (
+                  <p className="text-xs text-gray-400 mt-1">Required only if you opt in to text alerts below</p>
+                )}
               </div>
 
               <div>
@@ -225,7 +241,7 @@ export default function SignupPage() {
                 </select>
               </div>
 
-              {/* SMS Opt-in — CARRIER COMPLIANT (Transactional) */}
+              {/* SMS Opt-in — transactional account alerts only (unchecked by default) */}
               <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
                 <div className="flex items-start gap-3">
                   <input
@@ -238,25 +254,7 @@ export default function SignupPage() {
                     style={{ accentColor: '#1a4731' }}
                   />
                   <label htmlFor="smsOptIn" className="text-xs leading-relaxed text-gray-600 cursor-pointer">
-                    By checking this box, I expressly consent to receive <strong>transactional account alert text messages</strong> from <strong>Jiibe</strong>, including benefit redemption confirmations, monthly balance reminders, new benefit availability alerts, and account notifications. Message frequency varies based on account activity. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help or email <strong>support@jiibe.com</strong>. <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Consent is not required as a condition of accessing the Jiibe platform or any benefits. See our <Link href="/terms" className="font-semibold underline" style={{ color: '#1a4731' }}>Terms of Service</Link> (Section 5) for full SMS disclosures.
-                  </label>
-                </div>
-              </div>
-
-              {/* SMS Opt-in — Promotional Marketing */}
-              <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    id="smsMarketingOptIn"
-                    name="smsMarketingOptIn"
-                    checked={formData.smsMarketingOptIn}
-                    onChange={handleChange}
-                    className="mt-1 h-4 w-4 border-gray-300 rounded flex-shrink-0 cursor-pointer"
-                    style={{ accentColor: '#1a4731' }}
-                  />
-                  <label htmlFor="smsMarketingOptIn" className="text-xs leading-relaxed text-gray-600 cursor-pointer">
-                    By checking this box, I expressly consent to receive <strong>promotional and marketing text messages</strong> from <strong>Jiibe</strong>, including new benefit announcements, seasonal promotions, exclusive offers, and platform updates. Message frequency may vary. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help or email <strong>support@jiibe.com</strong>. <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Consent is not required as a condition of accessing the Jiibe platform or any benefits. See our <Link href="/terms" className="font-semibold underline" style={{ color: '#1a4731' }}>Terms of Service</Link> and <Link href="/sms-policy" className="font-semibold underline" style={{ color: '#1a4731' }}>SMS Policy</Link> for full disclosures.
+                    By checking this box, I agree to receive transactional account alert text messages from Jiibe (Jiibe LLC) at the phone number provided, including account confirmations, benefit redemption confirmations, monthly budget reminders, and security alerts. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out, <strong>HELP</strong> for help. Consent is not a condition of purchase. No mobile information will be shared with or sold to third parties for marketing or promotional purposes. See our <Link href="/terms#sms" className="font-semibold underline" style={{ color: '#1a4731' }}>Terms of Service</Link> and <Link href="/privacy" className="font-semibold underline" style={{ color: '#1a4731' }}>Privacy Policy</Link>.
                   </label>
                 </div>
               </div>
@@ -306,16 +304,16 @@ export default function SignupPage() {
                   <path d="M20 6L9 17l-5-5" />
                 </svg>
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">You&apos;re in!</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Access requested</h2>
               <p className="text-lg text-gray-500 mb-6 max-w-md mx-auto">
-                Thanks, <strong>{formData.firstName}</strong>! Your access request has been received.
+                Thanks, <strong>{formData.firstName}</strong>. Your access request has been received.
               </p>
               <div className="p-6 rounded-2xl text-left mb-8" style={{ background: 'rgba(26,71,49,0.06)', border: '1px solid rgba(26,71,49,0.12)' }}>
                 <p className="text-sm text-green-800 leading-relaxed">
                   📧 <strong>We&apos;ve notified your employer</strong> (Company ID: <strong>{formData.companyId}</strong>) that you&apos;ve requested access. Once approved, you&apos;ll receive an email at <strong>{formData.email}</strong> with instructions to activate your account and start choosing benefits.
                 </p>
                 <p className="text-sm text-green-800 leading-relaxed mt-3">
-                  🎁 You&apos;ll be able to choose from Netflix, Hulu, Uber, DoorDash, UrbanSitter, Rover, and 500+ more lifestyle benefits.
+                  You&apos;ll be able to choose from a curated catalog across 15 lifestyle categories.
                 </p>
                 <p className="text-sm text-green-800 leading-relaxed mt-3">
                   ⏱ Approval typically takes <strong>1–2 business days</strong>. Questions? <a href="mailto:support@jiibe.com" className="underline font-semibold">support@jiibe.com</a>
